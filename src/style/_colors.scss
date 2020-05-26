@@ -1,23 +1,25 @@
 // S for Secondary
 // T for tertiary
 
-$mainColor: #FFFFFF;
-$mainColorS: #C4C4C4;
-$mainColorT: #757575;
+$mainColor: #262016;
+// $mainColorS: #C4C4C4;
+// $mainColorT: #757575;
 
-$mainBack: #010101;
-$mainBackS: #111111; 
-$mainBackT: #1b1b1b; 
+$mainBack: #E9E1D3;
+$mainBackS: #F3CF94; 
+$mainBackT: #D4AC6A;
 
-$auxColor: #010101;
-$auxColorS: #111111;
-$auxColorT: #757575;
+$shadow: rgba($mainColor, .2);
 
-$overlay: rgba($mainBack, .8);
-$overlayS: rgba($mainBack, .6);
-$overlayT: rgba($mainBack, .4);
+// $auxColor: #010101;
+// $auxColorS: #111111;
+// $auxColorT: #757575;
 
-$auxBack: #FFFFFF;
+// $overlay: rgba($mainBack, .8);
+// $overlayS: rgba($mainBack, .6);
+// $overlayT: rgba($mainBack, .4);
 
-$mainAccent: #F5C518;
-$auxAccent: #5799EF;
+// $auxBack: #FFFFFF;
+
+// $mainAccent: #F5C518;
+// $auxAccent: #5799EF;

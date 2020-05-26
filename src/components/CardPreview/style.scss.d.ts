@@ -1,5 +1,7 @@
 declare namespace StyleScssNamespace {
   export interface IStyleScss {
+    bonus: string;
+    image: string;
     main: string;
   }
 }
