@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: $mainBackS;
+    border-radius: 50%;
+    box-shadow: 0 3px 3px $shadowS;
+    font-size: 32px;
+}
