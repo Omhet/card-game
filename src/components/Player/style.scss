@@ -3,6 +3,12 @@
     width: 100%;
     padding: 4px 12px 12px 12px;
     border: 4px solid #000;
+
+    &.column {
+        height: 100%;
+        flex-direction: column;
+        max-width: 224px;
+    }
 }
 
 .face {
@@ -13,12 +19,25 @@
     & > :last-child {
         margin-top: auto;
     }
+
+    &.column {
+        flex-direction: row;
+        justify-content: space-between;
+        & > :last-child {
+            margin-top: 0;
+        }
+    }
 }
 
 .body {
     display: flex;
     flex-direction: column;
-    padding-left: 12px;
+    margin-left: 12px;
+
+    &.column {
+        margin-left: 0;
+        margin-top: 8px;
+    }
 }
 
 .info {
@@ -28,5 +47,15 @@
 
     & > * + * {
         margin-left: 16px;
+    }
+
+    &.column {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        & > * + * {
+            margin-left: 0;
+            margin-top: 12px;
+        }
     }
 }

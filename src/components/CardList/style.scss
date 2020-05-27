@@ -1,7 +1,9 @@
 .main {
-    display: flex;
-}
-
-.curse {
-    width: 22px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 8px;
+    &.column {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr 1fr;
+    }   
 }

@@ -1,6 +1,18 @@
 .main {
     display: flex;
     align-items: baseline;
+    & > :last-child {
+        margin-left: 8px;
+    }
+
+    &.column {
+        flex-direction: column;
+        align-items: center;
+        & > :last-child {
+            margin-top: 4px;
+            margin-left: 0;
+        }
+    }
 }
 
 .name {
@@ -11,5 +23,4 @@
 .title {
     font-size: 16px;
     font-weight: lighter;
-    margin-left: 8px;
 }

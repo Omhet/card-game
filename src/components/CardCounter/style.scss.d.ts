@@ -1,5 +1,6 @@
 declare namespace StyleScssNamespace {
   export interface IStyleScss {
+    column: string;
     doorImage: string;
     main: string;
     treasureImage: string;
