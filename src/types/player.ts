@@ -12,5 +12,15 @@ export interface Player {
     treasures: number;
     doors: number;
     level: number;
-  }
+}
+
+export type PlayerColor = '#6FF2C5' | '#AD8BF2' | '#BFF288' | '#81BEF1' | '#DE7878' | '#F0DA5E';
   
+export const PlayerColorsMap: Record<PlayerId, PlayerColor> = {
+  '0': '#6FF2C5',
+  '1': '#81BEF1',
+  '2': '#AD8BF2',
+  '3': '#BFF288',
+  '4': '#DE7878',
+  '5': '#F0DA5E',
+}
