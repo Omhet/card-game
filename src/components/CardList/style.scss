@@ -1,6 +1,7 @@
 .main {
     display: grid;
     grid-auto-flow: column;
+    justify-content: flex-start;
     grid-gap: 8px;
     &.column {
         grid-auto-flow: row;
