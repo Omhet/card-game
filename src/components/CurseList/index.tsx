@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import styles from './style.scss';
-import { Cards } from '../../types/card';
+import { Curses } from '../../types/card';
 import CurseImage from '../../images/scull.png'
 
 interface Props {
-  curses: Cards;
+  curses: Curses;
 }
 
 export const CurseList: FunctionComponent<Props> = ({ curses }) => {

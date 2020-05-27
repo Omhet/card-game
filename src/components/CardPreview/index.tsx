@@ -1,12 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import styles from './style.scss';
 import SwagImage from '../../images/sword.png'
+import { Card } from '../../types/card';
 
-interface Props {
-  bonus?: number;
-}
-
-export const CardPreview: FunctionComponent<Props> = ({ bonus }) => {
+export const CardPreview: FunctionComponent<Card> = ({ bonus }) => {
   return (
     <div className={styles.main}>
       <span className={styles.bonus} >+{bonus}</span>
