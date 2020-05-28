@@ -3,7 +3,7 @@ export interface Card {
     bonus?: number;
 }
 
-export type Cards = Array<Card>;
+export type Cards = Array<Card | null>;
 
 export interface Curse {
     url: string;

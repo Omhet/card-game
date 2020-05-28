@@ -10,3 +10,7 @@ export default {
 export const Basic = () => (
   <CardList cards={cards} />
 );
+
+export const WithAllCardsEmpty = () => (
+  <CardList cards={new Array(5).fill(null)} />
+);
