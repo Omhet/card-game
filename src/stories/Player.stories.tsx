@@ -19,7 +19,7 @@ const props: PlayerProps = {
   doors: 3
 }
 
-export const Row = () => (
+export const Basic = () => (
   <Player {...props} />
 );
 

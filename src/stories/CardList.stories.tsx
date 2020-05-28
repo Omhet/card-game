@@ -14,3 +14,7 @@ export const Basic = () => (
 export const WithAllCardsEmpty = () => (
   <CardList cards={new Array(5).fill(null)} />
 );
+
+export const Column = () => (
+  <CardList isColumnLayout cards={cards} />
+);

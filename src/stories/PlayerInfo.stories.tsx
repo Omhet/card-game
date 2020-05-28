@@ -20,3 +20,7 @@ export const WithRace = () => (
 export const WithRoleAndRace = () => (
   <PlayerInfo name="Вован" race="эльф" role="воин" />
 );
+
+export const Column = () => (
+  <PlayerInfo isColumnLayout name="Вован" race="эльф" role="воин" />
+);
