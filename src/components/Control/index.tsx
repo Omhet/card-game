@@ -10,6 +10,6 @@ interface Props {
 
 export const Control: FunctionComponent<Props> = ({ image, className, onClick }) => {
   return (
-    <button onClick={onClick} className={classnames(styles.main, className)}><img src={image} /></button>
+    <button onClick={onClick} className={classnames(styles.main, className)}><img src={image} className={styles.image} /></button>
   );
 };

@@ -1,7 +1,10 @@
 declare namespace StyleScssNamespace {
   export interface IStyleScss {
-    image: string;
+    bottomLeft: string;
+    bottomRight: string;
     main: string;
+    topLeft: string;
+    topRight: string;
   }
 }
 
