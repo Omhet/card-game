@@ -1,7 +1,28 @@
 .main {
     display: flex;
-    max-width: 1024px;
-    margin: 0 auto;
     flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    flex: 1;
+}
+
+.arena {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+
+    & > :first-child {
+        margin: auto 0;
+    }
 }

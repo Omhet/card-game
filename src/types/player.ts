@@ -14,6 +14,8 @@ export interface Player {
     level: number;
 }
 
+export type Players = Array<Player | undefined>;
+
 export type PlayerColor = '#6FF2C5' | '#AD8BF2' | '#BFF288' | '#81BEF1' | '#DE7878' | '#F0DA5E';
   
 export const PlayerColorsMap: Record<PlayerId, PlayerColor> = {

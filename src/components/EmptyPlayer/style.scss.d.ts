@@ -1,9 +1,7 @@
 declare namespace StyleScssNamespace {
   export interface IStyleScss {
-    arena: string;
-    center: string;
+    column: string;
     main: string;
-    row: string;
   }
 }
 
