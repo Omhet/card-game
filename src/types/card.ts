@@ -4,7 +4,7 @@ export interface Card {
     type: 'treasure' | 'door'
 }
 
-export type Cards = Array<Card | null>;
+export type Cards = Array<Card>;
 
 export interface Curse {
     url: string;

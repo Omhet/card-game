@@ -8,13 +8,19 @@ import { EmptyCard } from '../EmptyCard';
 
 interface Props {
   cards: Cards;
+  maxCardsNumber: number;
   isColumnLayout?: boolean;
 }
 
-export const CardList: FunctionComponent<Props> = ({ cards, isColumnLayout = false }) => {
+export const CardList: FunctionComponent<Props> = ({ cards, maxCardsNumber, isColumnLayout = false }) => {
   return (
-    <div className={classnames(styles.main, { [styles.column]: isColumnLayout})}>
-      {cards.map((card, i) => card === null ? <EmptyCard key={i} /> : <CardPreview key={i} {...card} />)}
+    <div>
+      <div className={classnames(styles.grid, styles.emptyList, { [styles.column]: isColumnLayout })}>
+        {new Array(maxCardsNumber).fill(null).map((_, i) => <EmptyCard key={i} />)}
+      </div>
+      <div className={classnames(styles.grid, { [styles.column]: isColumnLayout })}>
+        {cards.map((card, i) => <CardPreview key={i} {...card} />)}
+      </div>
     </div>
   );
 };

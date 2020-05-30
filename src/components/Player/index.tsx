@@ -30,7 +30,7 @@ export const Player: FunctionComponent<Props> = ({isColumnLayout = false, id, na
           {!isColumnLayout && <CardCounter isColumnLayout={isColumnLayout} treasures={treasures} doors={doors} />}
           <CurseList curses={curses} />
         </div>
-        <CardList isColumnLayout={isColumnLayout} cards={cards} />
+        <CardList maxCardsNumber={9} isColumnLayout={isColumnLayout} cards={cards} />
       </div>
 
     </div>
