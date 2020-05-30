@@ -1,14 +1,15 @@
 import { Player } from '../types/player'
+import { Cards } from '../types/card';
 
-export const cards = [
-    { url: '#', bonus: 2 },
-    { url: '#', bonus: 3 },
-    { url: '#', bonus: 1 },
-    { url: '#', bonus: 4 },
-    { url: '#', bonus: 2 },
-    { url: '#', bonus: 2 },
-    { url: '#', bonus: 2 },
-    { url: '#', bonus: 2 },
+export const cards: Cards = [
+    { url: '#', bonus: 2, type: 'door' },
+    { url: '#', bonus: 3, type: 'door' },
+    { url: '#', bonus: 1, type: 'door' },
+    { url: '#', bonus: 4, type: 'door' },
+    { url: '#', bonus: 2, type: 'treasure' },
+    { url: '#', bonus: 2, type: 'treasure' },
+    { url: '#', bonus: 2, type: 'treasure' },
+    { url: '#', bonus: 2, type: 'treasure' },
 ]
 
 

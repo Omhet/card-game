@@ -3,6 +3,7 @@ import { withState } from '../helpers/typesafe-reducer';
 import { Action } from '../types';
 import { Players, Player, PlayerId } from '../../types/player';
 import { Cards } from '../../types/card';
+import { countTreasures, countDoors } from '../../utils/cards';
 
 const fsa = {
   hideStartScreen: createAction('[GAME] HIDE START SCREEN')(),
@@ -68,5 +69,5 @@ export const updateHand = (cards: Cards): Action => (dispatch, getState, invoke)
   const { connection: { clientId } } = getState();
 
   dispatch(gameFsa.setHand(cards));
-  dispatch(updatePlayer(clientId, { treasures: 4, doors: 4 }))
+  dispatch(updatePlayer(clientId, { treasures: countTreasures(cards), doors: countDoors(cards) }))
 };
