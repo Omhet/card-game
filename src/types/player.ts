@@ -20,7 +20,7 @@ export interface Player {
     level?: number;
 }
 
-export type Players = Array<Player | undefined>;
+export type Players = Array<Player>;
 
 export enum PlayerColor {
   Cyan = '#6FF2C5',
