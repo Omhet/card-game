@@ -1,6 +1,6 @@
 import { createAction } from 'typesafe-actions';
 import { withState } from '../helpers/typesafe-reducer';
-import { ThunkAction } from '../types';
+import { Action } from '../types';
 import { Players } from '../../types/player';
 import { player } from '../../stories/data';
 
@@ -30,7 +30,7 @@ export const game = withState(initialState)
     players: payload
   }))
 
-export const startGame = (name: string): ThunkAction => (dispatch) => {
+export const startGame = (name: string): Action => (dispatch) => {
   console.log(name)
   dispatch(gameFsa.setPlayers([player, { ...player, id: '1', name: 'Дарюха' }]));
   dispatch(gameFsa.hideStartScreen());

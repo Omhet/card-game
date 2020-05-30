@@ -1012,6 +1012,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@microsoft/signalr@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@microsoft/signalr/-/signalr-3.1.4.tgz#1082d2063be2d04d4b4699c6a2fb17232127ff43"
+  integrity sha512-GobftNY4dH0ewciBvfeJU2oQwa4ceXoHplSMlOZdf0G+NSjITFAjhSYFqSUyIRSmkDark17R5hGeuvd58/9Ivg==
+  dependencies:
+    eventsource "^1.0.7"
+    request "^2.88.0"
+    ws "^6.0.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -8398,6 +8407,13 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+redux-signalr@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/redux-signalr/-/redux-signalr-0.0.6.tgz#4fc193dc9a347470670a2dde774d7d2b8cd2e857"
+  integrity sha512-O5Slo00MXF72bMIduyOTUYZYtqfhudYamndoZiL/s1E5Vdyzte/o150V9t5Rgm10W4RuVoep1Ey1gGWj6sd1MA==
+  dependencies:
+    "@microsoft/signalr" "^3.1.4"
+
 redux-thunk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
@@ -10431,7 +10447,7 @@ write@1.0.3:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@^6.2.1:
+ws@^6.0.0, ws@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
   integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
