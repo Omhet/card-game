@@ -2,6 +2,7 @@ import { withCallbacks, signalMiddleware, LogLevel, HttpTransportType } from 're
 import { Dispatch } from '../types';
 import { Players, PlayerId } from '../../types/player';
 import { gameFsa } from '../modules/game';
+import { cards } from '../../stories/data';
 
 const callbacks = withCallbacks()
     .add('SetNewGamer', (name: string, id: PlayerId) => (dispatch: Dispatch) => {
@@ -13,6 +14,7 @@ const callbacks = withCallbacks()
         console.log('SetAllGamers', id, players);
         // Client
         dispatch(gameFsa.setPlayers(players));
+        dispatch(gameFsa.setHand(cards)) // TODO: Use cards from server
     })
 
 export const signal = signalMiddleware({
