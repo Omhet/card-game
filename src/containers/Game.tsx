@@ -1,7 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import { Game } from '../components/Game';
-import { player } from '../stories/data';
+import { useSelector } from 'react-redux';
+import { RootState } from '../redux/types';
 
 export const GameContainer: FunctionComponent = () => {
-  return <Game players={[player, player, player, player, player, player]} />;
+  const players = useSelector((state: RootState) => state.game.players);
+
+  return <Game players={players} />;
 };
