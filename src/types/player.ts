@@ -16,13 +16,20 @@ export interface Player {
 
 export type Players = Array<Player | undefined>;
 
-export type PlayerColor = '#6FF2C5' | '#AD8BF2' | '#BFF288' | '#81BEF1' | '#DE7878' | '#F0DA5E';
+export enum PlayerColor {
+  Cyan = '#6FF2C5',
+  Blue = '#81BEF1',
+  Purple = '#AD8BF2',
+  Green = '#BFF288',
+  Red = '#DE7878',
+  Yellow = '#F0DA5E',
+}
   
 export const PlayerColorsMap: Record<PlayerId, PlayerColor> = {
-  '0': '#6FF2C5',
-  '1': '#81BEF1',
-  '2': '#AD8BF2',
-  '3': '#BFF288',
-  '4': '#DE7878',
-  '5': '#F0DA5E',
+  '0': PlayerColor.Cyan,
+  '1': PlayerColor.Blue,
+  '2': PlayerColor.Purple,
+  '3': PlayerColor.Green,
+  '4': PlayerColor.Red,
+  '5': PlayerColor.Yellow,
 }
