@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { example } from './modules/example';
+import { game } from './modules/game';
 
 export const rootReducer = combineReducers({
-  example
+  game
 });
