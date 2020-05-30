@@ -3,6 +3,7 @@ import { Dispatch } from '../types';
 import { Players, PlayerId } from '../../types/player';
 import { gameFsa } from '../modules/game';
 import { cards } from '../../stories/data';
+import { connectionFsa } from '../modules/connection';
 
 const callbacks = withCallbacks()
     .add('SetNewGamer', (name: string, id: PlayerId) => (dispatch: Dispatch) => {
@@ -13,6 +14,7 @@ const callbacks = withCallbacks()
     .add('SetAllGamers', (id: PlayerId, players: Players) => (dispatch: Dispatch) => {
         console.log('SetAllGamers', id, players);
         // Client
+        dispatch(connectionFsa.setClientId(id));
         dispatch(gameFsa.setPlayers(players));
         dispatch(gameFsa.setHand(cards)) // TODO: Use cards from server
     })
