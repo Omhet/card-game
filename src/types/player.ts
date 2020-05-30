@@ -6,18 +6,18 @@ import Avatar3 from '../images/avatar-3.png'
 import Avatar4 from '../images/avatar-4.png'
 import Avatar5 from '../images/avatar-5.png'
 
-export type PlayerId = '0' | '1' | '2' | '3' | '4' | '5';
+export type PlayerId = 0 | 1 | 2 | 3 | 4 | 5;
 
 export interface Player {
     id: PlayerId;
     name: string;
     race?: string;
     role?: string;
-    cards: Cards;
-    curses: Curses;
-    treasures: number;
-    doors: number;
-    level: number;
+    cards?: Cards;
+    curses?: Curses;
+    treasures?: number;
+    doors?: number;
+    level?: number;
 }
 
 export type Players = Array<Player | undefined>;
@@ -32,19 +32,19 @@ export enum PlayerColor {
 }
   
 export const PlayerColorsMap: Record<PlayerId, PlayerColor> = {
-  '0': PlayerColor.Cyan,
-  '1': PlayerColor.Blue,
-  '2': PlayerColor.Purple,
-  '3': PlayerColor.Green,
-  '4': PlayerColor.Red,
-  '5': PlayerColor.Yellow,
+  0: PlayerColor.Cyan,
+  1: PlayerColor.Blue,
+  2: PlayerColor.Purple,
+  3: PlayerColor.Green,
+  4: PlayerColor.Red,
+  5: PlayerColor.Yellow,
 }
 
 export const PlayerAvatarMap: Record<PlayerId, string> = {
-  '0': Avatar0,
-  '1': Avatar1,
-  '2': Avatar2,
-  '3': Avatar3,
-  '4': Avatar4,
-  '5': Avatar5,
+  0: Avatar0,
+  1: Avatar1,
+  2: Avatar2,
+  3: Avatar3,
+  4: Avatar4,
+  5: Avatar5,
 }

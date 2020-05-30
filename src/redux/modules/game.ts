@@ -1,12 +1,12 @@
 import { createAction } from 'typesafe-actions';
 import { withState } from '../helpers/typesafe-reducer';
 import { Action } from '../types';
-import { Players } from '../../types/player';
-import { player } from '../../stories/data';
+import { Players, Player } from '../../types/player';
 
 const fsa = {
   hideStartScreen: createAction('[GAME] HIDE START SCREEN')(),
-  setPlayers: createAction('[GAME] SET PLAYERS')<Players>()
+  setPlayers: createAction('[GAME] SET PLAYERS')<Players>(),
+  addPlayer: createAction('[GAME] ADD PLAYER')<Player>(),
 };
 export const gameFsa = fsa;
 
@@ -29,9 +29,12 @@ export const game = withState(initialState)
     ...state,
     players: payload
   }))
+  .add(fsa.addPlayer, (state, { payload }) => ({
+    ...state,
+    players: [...state.players, payload]
+  }))
 
-export const startGame = (name: string): Action => (dispatch) => {
-  console.log(name)
-  dispatch(gameFsa.setPlayers([player, { ...player, id: '1', name: 'Дарюха' }]));
+export const startGame = (name: string): Action => async (dispatch, getState, invoke) => {
+  await invoke('OnNewGamerJoin', name);
   dispatch(gameFsa.hideStartScreen());
 };

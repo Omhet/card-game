@@ -4,7 +4,7 @@ export const cards = [{ url: '#', bonus: 2 }, { url: '#', bonus: 3 }, { url: '#'
 
 
 export const player: Player = {
-    id: '0',
+    id: 0,
     name: 'Вован',
     race: 'эльф',
     role: 'вор',

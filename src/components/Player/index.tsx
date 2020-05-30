@@ -14,7 +14,7 @@ interface Props extends PlayerProps {
  isColumnLayout?: boolean
 }
 
-export const Player: FunctionComponent<Props> = ({isColumnLayout = false, id, name, race, role, cards, curses, treasures, doors, level }) => {
+export const Player: FunctionComponent<Props> = ({isColumnLayout = false, id, name, race, role, cards = [], curses = [], treasures = 0, doors = 0, level = 1 }) => {
   const borderColor = PlayerColorsMap[id];
 
   return (
