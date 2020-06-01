@@ -10,7 +10,7 @@ module.exports = {
     const fileLoaderRule = config.module.rules.find(rule =>
       rule.test.test('.svg')
     );
-    fileLoaderRule.exclude = /\.svg$/;
+    fileLoaderRule.exclude = /\.svg|png$/;
 
     const rules = [...custom.module.rules, ...config.module.rules];
 
