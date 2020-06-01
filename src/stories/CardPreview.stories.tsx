@@ -6,5 +6,5 @@ export default {
 };
 
 export const Basic = () => (
-  <CardPreview url="#" bonus={2} type="treasure" />
+  <CardPreview url="#" bonus={2} subtype="swag" kind="hand" />
 );

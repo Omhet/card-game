@@ -3,7 +3,7 @@ import styles from './style.scss';
 import SwagImage from '../../images/sword.png'
 import { Card } from '../../types/card';
 
-export const CardPreview: FunctionComponent<Card> = ({ bonus }) => {
+export const CardPreview: FunctionComponent<Omit<Card, 'type'>> = ({ bonus }) => {
   return (
     <div className={styles.main}>
       <span className={styles.bonus} >+{bonus}</span>
