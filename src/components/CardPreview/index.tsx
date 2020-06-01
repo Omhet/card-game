@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import styles from './style.scss';
-import SwagImage from '../../images/sword.png'
 import { Card } from '../../types/card';
+import { getCardImage } from '../../utils/cards';
 
-export const CardPreview: FunctionComponent<Omit<Card, 'type'>> = ({ bonus }) => {
+export const CardPreview: FunctionComponent<Omit<Card, 'type'>> = ({ url, bonus, subtype, kind }) => {
   return (
     <div className={styles.main}>
-      <span className={styles.bonus} >+{bonus}</span>
-      <img className={styles.image} src={SwagImage} />
+      {bonus !== undefined && <span className={styles.bonus} >+{bonus}</span>}
+      <img title={url} className={styles.image} src={getCardImage(subtype, kind)} />
     </div>
   );
 };

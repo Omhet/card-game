@@ -1,6 +1,8 @@
+import HandImage from '../images/sword.png'
+
 export type CardType = 'treasure' | 'door';
-export type CardSubType = 'swag' | 'curse' | 'buff' | 'debuff';
-export type CardKind = 'hand' | 'shield' | 'head' | 'armor';
+export type CardSubType = 'swag' | 'curse';
+export type CardKind = 'hand';
 export interface Card {
     url: string;
     bonus?: number;
@@ -16,3 +18,7 @@ export interface Curse {
 }
 
 export type Curses = Array<Curse>;
+
+export const CardKindSwagImageMap: Record<CardKind, string> = {
+    'hand': HandImage,
+};

@@ -5,6 +5,10 @@ export default {
   title: 'CardPreview'
 };
 
-export const Basic = () => (
+export const Curse = () => (
+  <CardPreview url="#" subtype="curse" />
+);
+
+export const SwagHand = () => (
   <CardPreview url="#" bonus={2} subtype="swag" kind="hand" />
 );

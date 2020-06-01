@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styles from './style.scss';
 import { Curses } from '../../types/card';
-import CurseImage from '../../images/scull.png'
+import CurseImage from '../../images/curse.png'
 
 interface Props {
   curses: Curses;
