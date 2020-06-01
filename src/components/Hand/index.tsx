@@ -10,7 +10,7 @@ interface Props {
 export const Hand: FunctionComponent<Props> = ({ cards }) => {
   return (
     <div className={styles.main}>
-      <CardList cards={cards} />
+      <CardList maxCardsNumber={9} cards={cards} />
     </div>
   );
 };
