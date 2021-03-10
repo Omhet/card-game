@@ -18,7 +18,7 @@ export const CardList: FunctionComponent<Props> = ({ cards, maxCardsNumber, isCo
       <div className={classnames(styles.grid, styles.emptyList, { [styles.column]: isColumnLayout })}>
         {new Array(maxCardsNumber).fill(null).map((_, i) => <EmptyCard key={i} />)}
       </div>
-      <div className={classnames(styles.grid, { [styles.column]: isColumnLayout })}>
+      <div className={classnames(styles.grid, styles.cardList, { [styles.column]: isColumnLayout })}>
         {cards.map((card, i) => <CardPreview key={i} {...card} />)}
       </div>
     </div>

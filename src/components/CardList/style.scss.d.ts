@@ -1,5 +1,6 @@
 declare namespace StyleScssNamespace {
   export interface IStyleScss {
+    cardList: string;
     column: string;
     emptyList: string;
     grid: string;
